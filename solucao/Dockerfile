@@ -12,6 +12,8 @@ RUN cd /opt && \
       tar -xzvf apache-maven-3.6.3-bin.tar.gz && \
       export PATH=$PATH:/opt/apache-maven-3.6.3/bin
 
+ADD http://www.convert-unix-time.com/api?timestamp=now /tmp/limparcache
+
 RUN git clone https://github.com/treinamentookd/primeirocontainer.git
 
 RUN cd primeirocontainer/fonte && \
